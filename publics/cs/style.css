@@ -1,0 +1,31 @@
+
+
+header{
+    background-color: red;
+    height: 2em;
+    grid-area: header;
+
+}
+
+main{
+    background-color:burlywood;
+    grid-area: main;
+}
+footer{
+    background-color: blueviolet;
+    height: 1em;
+    grid-area: footer;
+}
+
+body{
+    display: grid; /* centra vertical */
+    margin: 0;
+    grid-template-rows: 33% 33% 33%; /* 3 columnas de distinto ancho */
+    grid-template-columns: 25% 50% 25%; 
+    grid-gap: 10px; /* espacio entre celdas */
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+}
+
