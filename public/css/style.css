@@ -10,6 +10,7 @@ header{
 main{
     background-color:burlywood;
     grid-area: main;
+    height: auto;
 }
 footer{
     background-color: blueviolet;
@@ -19,9 +20,10 @@ footer{
 
 body{
     display: grid; /* centra vertical */
+    height: 100vh;
     margin: 0;
-    grid-template-rows: 33% 33% 33%; /* 3 columnas de distinto ancho */
-    grid-template-columns: 25% 50% 25%; 
+    grid-template-rows: 5% 90% 5%; 
+    grid-template-columns: 15% 70% 15%; 
     grid-gap: 10px; /* espacio entre celdas */
     grid-template-areas:
         "header header header"

@@ -1,0 +1,1 @@
+/*Definicionde como se accede a los post en la base de datos*/
