@@ -1,0 +1,30 @@
+
+<h1>Editar Post</h1>
+
+    <!-- Mostramos datos actuales del post -->
+    <form action="/auth/editPost/<%= post.id %>" method="POST">
+
+        <label for="title">Título:</label>
+        <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            value="<%= post.title %>" 
+            required
+        >
+        <br><br>
+
+        <label for="content">Contenido:</label>
+        <textarea 
+            id="content" 
+            name="content" 
+            rows="8" 
+            required
+        ><%= post.content %></textarea>
+        <br><br>
+
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <br>
+    <a href="/auth/dashboard">Volver al Dashboard</a>

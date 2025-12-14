@@ -1,21 +1,57 @@
 
 
 header{
-    background-color: red;
+    background-color: rgb(202, 202, 245);
     height: 2em;
     grid-area: header;
+    grid-template-rows: 10% 10% 10%; 
+    grid-template-columns: 33% 33% 33%; 
+    grid-gap: 10px; /* espacio entre celdas */
+    display: grid;
+    justify-content:space-between;
+
+    
 
 }
+nav{
+    background-color: rgb(202, 202, 245);
+    height: 2em;
+    display: flex-box ;
+    margin-left: 2px;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+
+header div{
+    background-color: rgb(202, 202, 245);
+    height: 2em;
+    width: auto;
+    display: flex-box ;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+header nav a{
+    display: flex-box;
+    justify-content: space-between;
+}
+
 
 main{
-    background-color:burlywood;
+    background-color:rgb(230, 228, 226);
     grid-area: main;
     height: auto;
 }
+
 footer{
-    background-color: blueviolet;
-    height: 1em;
+    background-color: rgb(240, 86, 78);
+    height: 2em;
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 body{

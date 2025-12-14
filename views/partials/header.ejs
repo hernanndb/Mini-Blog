@@ -1,0 +1,15 @@
+<header>
+  <div><a href="/">Inicio</a></div>
+    <nav>
+      <% if(user){ %>
+      <a href="/auth/myPost">ver mis Post</a>
+      <a href="/auth/createPost">Create Post</a>
+      
+      <% } 
+        else{%>
+             <a href="/auth/login">Identificarme</a>
+        <%}
+      %>
+    </nav>
+    <div><% if(user){ %><a href="/auth/logout">Salir</a> <% } %></div>
+</header>

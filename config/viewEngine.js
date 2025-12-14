@@ -4,14 +4,17 @@
 
 import path from "path";
 import { fileURLToPath } from "url";
+import expressLayouts from "express-ejs-layouts";
 
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url)); //transforma de URL a Direccion de sistema(sea MAC,Windows,etc)  
-                                                                //path.dirname extrae el nombre y direccion de la carpeta Raiz
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); 
+                                                                
 
-function configViewEngine(app) {                                //La funcion le dice a app(Express) que los Views entan en --dirname(que es Carpeta Raiz)/views
-  app.set("view engine", "ejs");                                //y con path.join Arregla los "/" o "\" Segun que use tu sistema para indicar Subcarpetas
+function configViewEngine(app) {                                
+  app.set("view engine", "ejs");                                
   app.set("views", path.join(__dirname, "../views"));
+  app.use(expressLayouts);
+  app.set("layout", "layout/main");
 }
 
-export default configViewEngine;                                //Exporta la funcion para que la pueda usar o llamar app.js
+export default configViewEngine;                               

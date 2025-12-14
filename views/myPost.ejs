@@ -1,0 +1,25 @@
+<h1>Mis Publicaciones</h1>
+
+<% if (posts.length === 0) { %>
+    <p>No tenés publicaciones todavía.</p>
+<% } else { %>
+
+    <ul>
+        <% posts.forEach(post => { %>
+            <li style="margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                <h2><%= post.title %></h2>
+                <p><%= post.content %></p>
+                <small>Publicado: <%= new Date(post.created_at).toLocaleString() %></small>
+
+                <div style="margin-top: 10px;">
+                    <a href="/auth/editPost/<%= post.id %>">Editar</a>
+                    |
+                    <form action="/auth/deletePost/<%= post.id %>" method="POST" style="display:inline;">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+
+<% } %>

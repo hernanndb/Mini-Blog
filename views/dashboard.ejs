@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+
+
+<% if (user) { %>
+  <p>Hola <%= user.usuario %></p>
+<% } %>
+
+<h1>Mis Ultimos Posts:</h1>
+
+<% if (posts.length === 0) { %>
+    <p>No tenés publicaciones todavía.</p>
+<% } else { %>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li style="margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                <h2><%= post.title %></h2>
+                <p><%= post.content %></p>
+                <small>Publicado: <%= new Date(post.created_at).toLocaleString() %></small>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
