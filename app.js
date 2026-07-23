@@ -44,4 +44,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-app.listen(3000, ()=> console.log("Servidor en http://localhost:3000")); // app.listen le dice a express que escuche el puerto que le asigno
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
+ // app.listen le dice a express que escuche el puerto que le asigno
