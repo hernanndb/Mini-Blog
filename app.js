@@ -8,6 +8,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import setupSession from "./config/sessionConfig.js";
 import infouser from "./middleware/infouser.js";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 
 
@@ -44,7 +47,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.DB_PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
