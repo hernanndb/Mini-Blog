@@ -16,12 +16,13 @@ export const registerUser = async (req , res) => {
         res.redirect("/auth/login");
     }
     catch (error){
-        if (err.errors) {
-        const errorMessages = err.errors.map((error) => error.message);
+        if (error.errors) {
+        const errorMessages = error.errors.map((issue) => issue.message);
         console.log(errorMessages)
       // errores de Zod
-        return res.status(400).send(err.errors[0].message);
+        return res.status(400).send(error.errors[0].message);
     }
+        console.error("Error en servidor:", error);
         res.status(500).send("Error registrando usuario")
     }
 }
