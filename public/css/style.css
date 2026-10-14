@@ -1,7 +1,7 @@
 
 
 header{
-    background-color: rgb(202, 202, 245);
+    background-color: rgb(98, 98, 247);
     height: 2em;
     grid-area: header;
     grid-template-rows: 10% 10% 10%; 
@@ -14,9 +14,9 @@ header{
 
 }
 nav{
-    background-color: rgb(202, 202, 245);
+    background-color: rgba(100, 100, 245, 0.918);
     height: 2em;
-    display: flex-box ;
+    display: flex;
     margin-left: 2px;
     justify-content: space-between;
     align-content: center;
@@ -24,29 +24,46 @@ nav{
 }
 
 header div{
-    background-color: rgb(202, 202, 245);
+    background-color: rgba(100, 100, 245, 0.918);
     height: 2em;
     width: auto;
-    display: flex-box ;
     justify-content: center;
     align-content: center;
+    
     
 }
 
 header nav a{
-    display: flex-box;
+    display: flex;
     justify-content: space-between;
+    color:rgb(248, 248, 247);
+}
+
+ #Inicio{
+    color:rgb(248, 248, 247);
+    display: flex;
+    justify-content: center;
+}
+
+#Bienvenido{
+    display: flex;
+    justify-content: center;
 }
 
 
+
 main{
-    background-color:rgb(230, 228, 226);
+    background-color:rgb(248, 248, 247);
     grid-area: main;
     height: auto;
 }
 
+#Subtitulo{
+    display: flex;
+    justify-content: center;
+}
 footer{
-    background-color: rgb(240, 86, 78);
+    background-color: rgb(164, 242, 241);
     height: 2em;
     grid-area: footer;
     display: flex;

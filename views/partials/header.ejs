@@ -1,5 +1,5 @@
 <header>
-  <div><a href="/">Inicio</a></div>
+  <div><a id="Inicio" href="/">Inicio</a></div>
     <nav>
       <% if(user){ %>
       <a href="/auth/myPost">ver mis Post</a>
@@ -7,7 +7,7 @@
       
       <% } 
         else{%>
-             <a href="/auth/login">Identificarme</a>
+             <a  href="/auth/login">Identificarme</a>
         <%}
       %>
     </nav>
