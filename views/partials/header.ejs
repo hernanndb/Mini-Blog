@@ -5,12 +5,12 @@
       <% if(user){ %>
       <a href="/auth/myPost">ver mis Post</a>
       <a href="/auth/createPost">Create Post</a>
+      <a id="Log" href="/auth/logout">Salir</a> 
       
       <% } 
         else{%>
-             <a  href="/auth/login">Identificarme</a>
+             <a id="Log" href="/auth/login">Identificarme</a>
         <%}
       %>
     </nav>
-    <% if(user){ %><a href="/auth/logout">Salir</a> <% } %>
 </header>
