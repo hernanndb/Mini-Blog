@@ -1,6 +1,7 @@
 <header>
-  <div><a id="Inicio" href="/">Inicio</a></div>
+  
     <nav>
+      <a id="Inicio" href="/">Inicio</a>
       <% if(user){ %>
       <a href="/auth/myPost">ver mis Post</a>
       <a href="/auth/createPost">Create Post</a>
@@ -11,5 +12,5 @@
         <%}
       %>
     </nav>
-    <div><% if(user){ %><a href="/auth/logout">Salir</a> <% } %></div>
+    <% if(user){ %><a href="/auth/logout">Salir</a> <% } %>
 </header>

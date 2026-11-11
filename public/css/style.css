@@ -1,86 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-
-header{
-    background-color: rgb(98, 98, 247);
-    height: 2em;
-    grid-area: header;
-    grid-template-rows: 10% 10% 10%; 
-    grid-template-columns: 33% 33% 33%; 
-    grid-gap: 10px; /* espacio entre celdas */
-    display: grid;
-    justify-content:space-between;
-
-    
-
-}
-nav{
-    background-color: rgba(100, 100, 245, 0.918);
-    height: 2em;
-    display: flex;
-    margin-left: 2px;
-    justify-content: space-between;
-    align-content: center;
-    
-}
-
-header div{
-    background-color: rgba(100, 100, 245, 0.918);
-    height: 2em;
-    width: auto;
-    justify-content: center;
-    align-content: center;
-    
-    
-}
-
-header nav a{
-    display: flex;
-    justify-content: space-between;
-    color:rgb(248, 248, 247);
-}
-
- #Inicio{
-    color:rgb(248, 248, 247);
-    display: flex;
-    justify-content: center;
-}
-
-#Bienvenido{
-    display: flex;
-    justify-content: center;
-}
-
-
-
-main{
-    background-color:rgb(248, 248, 247);
-    grid-area: main;
-    height: auto;
-}
-
-#Subtitulo{
-    display: flex;
-    justify-content: center;
-}
-footer{
-    background-color: rgb(164, 242, 241);
-    height: 2em;
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body{
-    display: grid; /* centra vertical */
-    height: 100vh;
-    margin: 0;
-    grid-template-rows: 5% 90% 5%; 
-    grid-template-columns: 15% 70% 15%; 
-    grid-gap: 10px; /* espacio entre celdas */
-    grid-template-areas:
-        "header header header"
-        ". main ."
-        "footer footer footer";
+    background-color:#f8fafc;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa al menos toda la pantalla */
 }
 
+
+header {
+  background-color: #1e3a8a; /* Azul noche elegante */
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Manda un enlace a la izq y otro a la der */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #38bdf8; /* Celeste al pasar el mouse */
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo si la página está vacía */
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
+.hero-section {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+#Bienvenido {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+#Subtitulo {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.demo-box {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+footer {
+  background-color: #1e3a8a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  margin-top: auto;
+}
